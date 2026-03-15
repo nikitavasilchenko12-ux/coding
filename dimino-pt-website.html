@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimino Physical Therapy | Staten Island, NY</title>
+  <meta name="description" content="Dimino Physical Therapy provides trusted physical therapy care in Staten Island, NY. Call (718) 667-7700 to book an appointment." />
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   Dimino Physical Therapy — Main Stylesheet
+   Colors: Medical Blue #2C6BED | Navy #1B2A4E | Soft Gray #F3F5F7
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── CSS Reset & Variables ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:       #2C6BED;
+  --blue-dark:  #1A56D6;
+  --blue-light: #EBF3FF;
+  --blue-mid:   #BDD6F8;
+  --navy:       #1B2A4E;
+  --navy-light: #2D3F6E;
+  --gray-bg:    #F3F5F7;
+  --gray-border:#E2E8F0;
+  --text:       #1B2A4E;
+  --text-mid:   #4A5568;
+  --text-light: #718096;
+  --white:      #FFFFFF;
+  --gold:       #F59E0B;
+  --green:      #10B981;
+  --red:        #EF4444;
+
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+
+  --shadow-sm:  0 1px 3px rgba(27,42,78,.08), 0 1px 2px rgba(27,42,78,.06);
+  --shadow-md:  0 4px 16px rgba(27,42,78,.10), 0 2px 6px rgba(27,42,78,.06);
+  --shadow-lg:  0 12px 40px rgba(27,42,78,.14), 0 4px 16px rgba(27,42,78,.08);
+  --shadow-xl:  0 20px 60px rgba(27,42,78,.18);
+
+  --transition: 0.25s ease;
+  --font-main:  'Montserrat', 'Open Sans', system-ui, sans-serif;
+  --font-body:  'Open Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { text-decoration: none; color: inherit; }
+
+ul { list-style: none; }
+
+/* ─── Utility ────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.section { padding-block: 88px; }
+.section--alt { background: var(--gray-bg); }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-main);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border: 1.5px solid var(--blue-mid);
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: var(--font-main);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--text-mid);
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+/* ─── Buttons ────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.92rem;
+  border-radius: var(--radius-md);
+  padding: 12px 24px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background var(--transition), color var(--transition),
+              border-color var(--transition), box-shadow var(--transition),
+              transform var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+  box-shadow: 0 4px 14px rgba(44,107,237,.35);
+}
+.btn-primary:hover {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  box-shadow: 0 6px 20px rgba(44,107,237,.45);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--navy);
+}
+.btn-outline:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.btn-lg  { padding: 15px 30px; font-size: 1rem; border-radius: var(--radius-lg); }
+.btn-xl  { padding: 18px 40px; font-size: 1.1rem; border-radius: var(--radius-lg); }
+.btn-sm  { padding: 9px 18px; font-size: 0.82rem; }
+
+/* ─── Logo ───────────────────────────────────────────────────── */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+.logo-link:hover .logo-icon { transform: scale(1.07); }
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo-name {
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+.logo-sub {
+  font-family: var(--font-main);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.logo-link--white .logo-name { color: var(--white); }
+.logo-link--white .logo-sub  { color: var(--blue-mid); }
+
+/* ═══════════════════════════════════════════════════════════════
+   NAVBAR
+   ═══════════════════════════════════════════════════════════════ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+}
+
+.navbar.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a:not(.btn) {
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+}
+
+.nav-links a:not(.btn):hover {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+
+.btn-nav { margin-left: 8px; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════════════════════ */
+.hero {
+  padding-top: 100px;
+  padding-bottom: 0;
+  background: linear-gradient(135deg, #EBF3FF 0%, #FFFFFF 55%, #F0F8FF 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(44,107,237,.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding-block: 72px;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-family: var(--font-main);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border: 1.5px solid var(--blue-mid);
+  padding: 5px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: var(--font-main);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  max-width: 460px;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Hero image */
+.hero-image-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hero-img-placeholder {
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 3px solid var(--blue-mid);
+}
+
+.hero-img-placeholder svg { width: 100%; height: auto; }
+
+/* ═══════════════════════════════════════════════════════════════
+   QUICK INFO BAR
+   ═══════════════════════════════════════════════════════════════ */
+.quick-info {
+  background: var(--navy);
+  padding-block: 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 28px 24px;
+  border-right: 1px solid rgba(255,255,255,.1);
+  transition: background var(--transition);
+}
+
+.info-card:last-child { border-right: none; }
+.info-card:hover { background: rgba(255,255,255,.05); }
+
+.info-icon {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  background: rgba(44,107,237,.3);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue-mid);
+}
+
+.info-icon svg { width: 22px; height: 22px; }
+
+.info-icon--gold { background: rgba(245,158,11,.2); color: var(--gold); }
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-label {
+  font-family: var(--font-main);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+}
+
+.info-value {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.info-link:hover { color: var(--blue-mid); }
+
+.info-closed { color: #FC8181 !important; }
+
+/* ═══════════════════════════════════════════════════════════════
+   ABOUT
+   ═══════════════════════════════════════════════════════════════ */
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-main);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.about-list svg {
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+/* About image */
+.about-img-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 3px solid var(--blue-mid);
+}
+
+.about-img-wrap svg { width: 100%; height: auto; }
+
+.about-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  padding: 10px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--blue);
+}
+
+.badge-num {
+  font-family: var(--font-main);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.badge-txt {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SERVICES
+   ═══════════════════════════════════════════════════════════════ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+  cursor: default;
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--blue-mid);
+}
+
+.service-icon {
+  width: 56px; height: 56px;
+  background: var(--blue-light);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue);
+  transition: background var(--transition), color var(--transition);
+}
+
+.service-card:hover .service-icon {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.service-icon svg { width: 28px; height: 28px; }
+
+.service-title {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.service-desc {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOURS
+   ═══════════════════════════════════════════════════════════════ */
+.hours-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 80px;
+  align-items: center;
+}
+
+.hours-content .section-title { margin-bottom: 32px; }
+
+.hours-table-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1.5px solid var(--gray-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 36px;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table td {
+  padding: 14px 22px;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+}
+
+.hours-table td:first-child { font-weight: 700; color: var(--navy); }
+.hours-table td:nth-child(2) { color: var(--text-mid); font-weight: 500; }
+
+.open-day { background: var(--white); }
+.open-day:nth-child(even) { background: #FAFBFF; }
+.closed-day { background: #FFF5F5; }
+.closed-day td:first-child { color: var(--text-light); }
+
+.hours-table tr:not(:last-child) td { border-bottom: 1px solid var(--gray-border); }
+
+.badge-open {
+  display: inline-block;
+  background: #D1FAE5;
+  color: #065F46;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-family: var(--font-main);
+}
+
+.badge-closed {
+  display: inline-block;
+  background: #FEE2E2;
+  color: #991B1B;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-family: var(--font-main);
+}
+
+/* Clock */
+.clock-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.clock-svg { width: 200px; height: 200px; }
+
+.clock-label {
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.clock-label span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LOCATION
+   ═══════════════════════════════════════════════════════════════ */
+.location-inner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+}
+
+.map-wrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--blue-mid);
+  height: 420px;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.location-info {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--gray-border);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.loc-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.loc-icon {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  background: var(--blue-light);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue);
+}
+.loc-icon svg { width: 20px; height: 20px; }
+
+.loc-label {
+  font-family: var(--font-main);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.loc-val {
+  font-family: var(--font-main);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.5;
+}
+.loc-link:hover { color: var(--blue); }
+
+/* ═══════════════════════════════════════════════════════════════
+   REVIEWS
+   ═══════════════════════════════════════════════════════════════ */
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.summary-stars {
+  display: flex;
+  gap: 3px;
+  color: var(--gold);
+}
+
+.summary-stars svg { width: 22px; height: 22px; }
+
+.summary-score {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.summary-count {
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.review-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.review-stars {
+  color: var(--gold);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  flex: 1;
+  font-style: italic;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--gray-border);
+}
+
+.review-avatar {
+  width: 40px; height: 40px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.review-date {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTACT
+   ═══════════════════════════════════════════════════════════════ */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.contact-sub {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.c-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+
+.c-detail svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--blue); }
+
+/* Contact Form */
+.contact-form-wrap {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-title {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-family: var(--font-main);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.03em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--gray-bg);
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  outline: none;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(44,107,237,.12);
+  background: var(--white);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-light); }
+
+.form-success {
+  margin-top: 14px;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #065F46;
+  background: #D1FAE5;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: none;
+  border: 1px solid #6EE7B7;
+}
+
+.form-success.visible { display: block; }
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════════ */
+.footer {
+  background: var(--navy);
+  padding-top: 72px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 60px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-brand .logo-link { margin-bottom: 16px; }
+
+.footer-tagline {
+  font-family: var(--font-main);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+  margin-bottom: 18px;
+}
+
+.footer-addr {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.footer-phone {
+  display: inline-block;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.footer-phone:hover { color: var(--blue-mid); }
+
+.footer-hours {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,.5);
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+  margin-bottom: 20px;
+}
+
+.footer-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,.7);
+  transition: color var(--transition);
+  padding: 2px 0;
+}
+
+.footer-links a:hover { color: var(--white); }
+
+.footer-contact p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,.65);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-cta { display: inline-flex; }
+
+.footer-bottom {
+  padding-block: 20px;
+}
+
+.footer-bottom p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,.4);
+  text-align: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — TABLET (≤ 1024px)
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid  { grid-template-columns: repeat(2, 1fr); }
+  .info-grid     { grid-template-columns: repeat(2, 1fr); }
+  .info-card:nth-child(2) { border-right: none; }
+  .info-card:nth-child(3) { border-right: 1px solid rgba(255,255,255,.1); }
+  .info-card:nth-child(3),
+  .info-card:nth-child(4) { border-top: 1px solid rgba(255,255,255,.1); }
+  .hours-inner { grid-template-columns: 1fr; }
+  .hours-visual { display: none; }
+  .location-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤ 768px)
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .section { padding-block: 60px; }
+
+  /* Navbar */
+  .hamburger { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: 70px; left: 0; right: 0;
+    background: var(--white);
+    border-bottom: 2px solid var(--blue-light);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 24px 24px;
+    gap: 4px;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a:not(.btn) {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .btn-nav { margin-left: 0; margin-top: 8px; text-align: center; justify-content: center; }
+
+  /* Hero */
+  .hero { padding-top: 80px; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-block: 48px;
+    text-align: center;
+  }
+  .hero-subtitle { margin-inline: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-image-wrap { justify-content: center; }
+
+  /* Info bar */
+  .info-grid { grid-template-columns: 1fr 1fr; }
+  .info-card:nth-child(3) { border-right: none; }
+  .info-card:nth-child(2) { border-right: 1px solid rgba(255,255,255,.1); }
+
+  /* About */
+  .about-inner { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Services */
+  .services-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .service-card { padding: 24px 20px; }
+
+  /* Contact */
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+  .contact-form-wrap { padding: 28px; }
+
+  /* Reviews */
+  .reviews-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+  .footer-brand { grid-column: auto; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE (≤ 480px)
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .container { padding-inline: 16px; }
+  .hero-title { font-size: 1.8rem; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .services-grid { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+  .info-card { border-right: none !important; border-top: 1px solid rgba(255,255,255,.1); }
+  .info-card:first-child { border-top: none; }
+  .map-wrap { height: 300px; }
+  .btn-xl { padding: 14px 24px; font-size: 1rem; }
+}
+
+/* ─── Scroll animations ──────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Focus styles (accessibility) ──────────────────────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ NAVBAR ═══ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="#home" class="logo-link">
+        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Background circle -->
+          <circle cx="24" cy="24" r="24" fill="#2C6BED"/>
+          <!-- Stylized D + spine -->
+          <path d="M14 12 H22 C30 12 36 17.5 36 24 C36 30.5 30 36 22 36 H14 Z"
+                fill="none" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+          <!-- Spine dots (vertebrae) -->
+          <circle cx="24" cy="18" r="1.8" fill="white"/>
+          <circle cx="26" cy="22" r="1.8" fill="white"/>
+          <circle cx="24" cy="26" r="1.8" fill="white"/>
+          <circle cx="26" cy="30" r="1.8" fill="white"/>
+          <!-- Motion arc -->
+          <path d="M14 18 Q18 14 22 16" stroke="#93C5FD" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-name">Dimino</span>
+          <span class="logo-sub">Physical Therapy</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Nav links -->
+      <nav class="nav-links" id="nav-links" role="navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#hours">Hours</a>
+        <a href="#location">Location</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:7186677700" class="btn btn-primary btn-nav">Call to Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════ HERO ═══════ -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">Staten Island's Trusted PT Clinic</span>
+        <h1 class="hero-title">
+          Dimino<br/>Physical Therapy
+        </h1>
+        <p class="hero-subtitle">
+          High-quality physiotherapy treatment focused on recovery, mobility, and long-term wellness.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:7186677700" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1.01.37 2 .72 2.96a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.12-.56a2 2 0 012.11-.45c.96.35 1.95.59 2.96.72A2 2 0 0122 16.92z"/></svg>
+            Call Now — (718) 667-7700
+          </a>
+          <a href="https://maps.google.com/?q=299+Guyon+Ave+Suite+B+Staten+Island+NY+10306" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-img-placeholder">
+          <!-- Clinic exterior illustration placeholder -->
+          <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sky -->
+            <rect width="520" height="380" fill="#EBF3FF"/>
+            <!-- Clouds -->
+            <ellipse cx="80" cy="60" rx="55" ry="22" fill="white" opacity="0.9"/>
+            <ellipse cx="120" cy="50" rx="45" ry="20" fill="white" opacity="0.9"/>
+            <ellipse cx="400" cy="75" rx="60" ry="20" fill="white" opacity="0.85"/>
+            <ellipse cx="445" cy="65" rx="45" ry="18" fill="white" opacity="0.85"/>
+            <!-- Ground -->
+            <rect y="290" width="520" height="90" fill="#D1E8D0"/>
+            <!-- Sidewalk -->
+            <rect y="310" width="520" height="40" fill="#C8C8C8"/>
+            <!-- Building body -->
+            <rect x="100" y="130" width="320" height="200" fill="#F0F4FF"/>
+            <rect x="100" y="130" width="320" height="200" fill="none" stroke="#2C6BED" stroke-width="2"/>
+            <!-- Roof -->
+            <polygon points="85,130 260,70 435,130" fill="#1B2A4E"/>
+            <!-- Roof edge -->
+            <line x1="85" y1="130" x2="435" y2="130" stroke="#2C6BED" stroke-width="3"/>
+            <!-- Windows row 1 -->
+            <rect x="130" y="160" width="60" height="50" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <line x1="160" y1="160" x2="160" y2="210" stroke="#2C6BED" stroke-width="1"/>
+            <line x1="130" y1="185" x2="190" y2="185" stroke="#2C6BED" stroke-width="1"/>
+            <rect x="230" y="160" width="60" height="50" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <line x1="260" y1="160" x2="260" y2="210" stroke="#2C6BED" stroke-width="1"/>
+            <line x1="230" y1="185" x2="290" y2="185" stroke="#2C6BED" stroke-width="1"/>
+            <rect x="330" y="160" width="60" height="50" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <line x1="360" y1="160" x2="360" y2="210" stroke="#2C6BED" stroke-width="1"/>
+            <line x1="330" y1="185" x2="390" y2="185" stroke="#2C6BED" stroke-width="1"/>
+            <!-- Door -->
+            <rect x="210" y="250" width="100" height="80" rx="4" fill="#2C6BED"/>
+            <rect x="215" y="255" width="42" height="70" rx="2" fill="#BDD6F8"/>
+            <rect x="263" y="255" width="42" height="70" rx="2" fill="#BDD6F8"/>
+            <circle cx="255" cy="292" r="4" fill="#1B2A4E"/>
+            <circle cx="265" cy="292" r="4" fill="#1B2A4E"/>
+            <!-- Sign board -->
+            <rect x="145" y="235" width="225" height="30" rx="4" fill="#1B2A4E"/>
+            <text x="257" y="255" font-family="Montserrat,sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="600">DIMINO PHYSICAL THERAPY</text>
+            <!-- Cross / medical symbol -->
+            <rect x="242" y="90" width="36" height="36" rx="4" fill="#2C6BED" opacity="0.9"/>
+            <rect x="249" y="97" width="22" height="8" rx="2" fill="white"/>
+            <rect x="253" y="91" width="8" height="22" rx="2" fill="white"/>
+            <!-- Trees -->
+            <rect x="55" y="260" width="10" height="50" fill="#8B6914"/>
+            <ellipse cx="60" cy="240" rx="28" ry="35" fill="#4CAF50"/>
+            <ellipse cx="60" cy="230" rx="22" ry="28" fill="#66BB6A"/>
+            <rect x="445" y="260" width="10" height="50" fill="#8B6914"/>
+            <ellipse cx="450" cy="240" rx="28" ry="35" fill="#4CAF50"/>
+            <ellipse cx="450" cy="230" rx="22" ry="28" fill="#66BB6A"/>
+            <!-- Suite B label -->
+            <rect x="170" y="218" width="50" height="18" rx="3" fill="#2C6BED"/>
+            <text x="195" y="230" font-family="Montserrat,sans-serif" font-size="9" fill="white" text-anchor="middle">Suite B</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ QUICK INFO ══ -->
+  <section class="quick-info" id="info-bar">
+    <div class="container info-grid">
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Location</span>
+          <span class="info-value">299 Guyon Ave Suite B</span>
+          <span class="info-value">Staten Island, NY 10306</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1.01.37 2 .72 2.96a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.12-.56a2 2 0 012.11-.45c.96.35 1.95.59 2.96.72A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Phone</span>
+          <a href="tel:7186677700" class="info-value info-link">(718) 667-7700</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon info-icon--gold">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Rating</span>
+          <span class="info-value">⭐ 4.9 / 5 Stars</span>
+          <span class="info-value">Based on 45 Reviews</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Hours</span>
+          <span class="info-value">Mon–Fri: 8:30 AM – 5:00 PM</span>
+          <span class="info-value info-closed">Sat &amp; Sun: Closed</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ ABOUT ══════ -->
+  <section class="about section" id="about">
+    <div class="container about-inner">
+      <div class="about-content">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">About Dimino Physical Therapy</h2>
+        <p class="about-text">
+          Dimino Physical Therapy provides personalized physiotherapy care in Staten Island. The clinic focuses on rehabilitation, pain reduction, and restoring movement using evidence-based physical therapy treatments. The goal is to help patients recover mobility and return to normal daily activities safely.
+        </p>
+        <ul class="about-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Licensed physical therapy professionals
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Personalized rehabilitation programs
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Injury recovery and pain management
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Mobility and strengthening therapy
+          </li>
+        </ul>
+        <a href="tel:7186677700" class="btn btn-primary">Schedule a Consultation</a>
+      </div>
+
+      <div class="about-image">
+        <div class="about-img-wrap">
+          <!-- Clinic interior / PT illustration -->
+          <svg viewBox="0 0 420 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="420" height="360" fill="#EBF3FF" rx="16"/>
+            <!-- Room floor -->
+            <rect y="260" width="420" height="100" fill="#D8E8FF" rx="0"/>
+            <!-- Treatment table -->
+            <rect x="80" y="200" width="200" height="20" rx="5" fill="#1B2A4E"/>
+            <rect x="90" y="220" width="180" height="60" rx="4" fill="#2C6BED" opacity="0.8"/>
+            <rect x="100" y="210" width="160" height="10" rx="3" fill="#BDD6F8"/>
+            <!-- Table legs -->
+            <rect x="95" y="280" width="12" height="20" rx="2" fill="#1B2A4E"/>
+            <rect x="253" y="280" width="12" height="20" rx="2" fill="#1B2A4E"/>
+            <!-- Patient (lying) -->
+            <ellipse cx="200" cy="205" rx="30" ry="14" fill="#FDDCB5"/>
+            <circle cx="250" cy="200" r="16" fill="#FDDCB5"/>
+            <rect x="220" y="197" width="32" height="10" rx="5" fill="#FDDCB5"/>
+            <!-- Therapist -->
+            <circle cx="330" cy="175" r="20" fill="#FDDCB5"/>
+            <rect x="310" y="195" width="40" height="65" rx="8" fill="#2C6BED"/>
+            <rect x="305" y="218" width="18" height="40" rx="6" fill="#FDDCB5" transform="rotate(-20 305 218)"/>
+            <rect x="337" y="218" width="18" height="40" rx="6" fill="#FDDCB5" transform="rotate(20 337 218)"/>
+            <rect x="315" y="260" width="14" height="35" rx="4" fill="#1B2A4E"/>
+            <rect x="331" y="260" width="14" height="35" rx="4" fill="#1B2A4E"/>
+            <!-- Wall shelf / equipment -->
+            <rect x="20" y="130" width="50" height="10" rx="3" fill="#1B2A4E"/>
+            <rect x="25" y="100" width="18" height="30" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <rect x="47" y="110" width="18" height="20" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <!-- Medical cross on wall -->
+            <rect x="370" y="100" width="36" height="36" rx="4" fill="#2C6BED" opacity="0.25"/>
+            <rect x="377" y="108" width="22" height="8" rx="2" fill="#2C6BED"/>
+            <rect x="381" y="102" width="8" height="22" rx="2" fill="#2C6BED"/>
+            <!-- Window -->
+            <rect x="140" y="60" width="120" height="90" rx="6" fill="#BDD6F8" stroke="#2C6BED" stroke-width="2"/>
+            <line x1="200" y1="60" x2="200" y2="150" stroke="#2C6BED" stroke-width="1.5"/>
+            <line x1="140" y1="105" x2="260" y2="105" stroke="#2C6BED" stroke-width="1.5"/>
+            <!-- Exercise ball -->
+            <circle cx="50" cy="255" r="28" fill="#93C5FD" opacity="0.7"/>
+            <ellipse cx="50" cy="255" rx="28" ry="8" fill="#60A5FA" opacity="0.4"/>
+            <!-- Tag badge -->
+            <rect x="290" y="40" width="110" height="42" rx="8" fill="#1B2A4E"/>
+            <text x="345" y="57" font-family="Montserrat,sans-serif" font-size="8" fill="#93C5FD" text-anchor="middle" font-weight="600">DIMINO PT</text>
+            <text x="345" y="72" font-family="Open Sans,sans-serif" font-size="7.5" fill="white" text-anchor="middle">Expert PT Care</text>
+          </svg>
+          <div class="about-badge">
+            <span class="badge-num">4.9★</span>
+            <span class="badge-txt">Patient Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ SERVICES ═══ -->
+  <section class="services section section--alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Physical Therapy Services</h2>
+        <p class="section-sub">Comprehensive rehabilitation treatments designed to restore strength, mobility, and quality of life.</p>
+      </div>
+      <div class="services-grid">
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Physiotherapy Treatment</h3>
+          <p class="service-desc">Professional rehabilitation services designed to restore strength, mobility, and movement following injury or chronic pain.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Rehabilitation Therapy</h3>
+          <p class="service-desc">Post-injury and post-surgery recovery programs tailored to get you back to full function as quickly and safely as possible.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="5" r="3"/><path d="M12 8v8M8 20h8M6 12c0-2 1-3 3-3M18 12c0-2-1-3-3-3"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Mobility &amp; Strength Training</h3>
+          <p class="service-desc">Therapeutic exercises and manual techniques to improve range of motion and rebuild muscle strength safely.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Pain Management Therapy</h3>
+          <p class="service-desc">Evidence-based treatments designed to reduce acute and chronic pain while restoring full functionality and comfort.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ HOURS ══════ -->
+  <section class="hours section" id="hours">
+    <div class="container hours-inner">
+      <div class="hours-content">
+        <span class="section-tag">When We're Open</span>
+        <h2 class="section-title">Opening Times</h2>
+        <div class="hours-table-wrap">
+          <table class="hours-table" aria-label="Clinic opening hours">
+            <tbody>
+              <tr class="open-day"><td>Monday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="open-day"><td>Tuesday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="open-day"><td>Wednesday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="open-day"><td>Thursday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="open-day"><td>Friday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="closed-day"><td>Saturday</td><td>Closed</td><td><span class="badge-closed">Closed</span></td></tr>
+              <tr class="closed-day"><td>Sunday</td><td>Closed</td><td><span class="badge-closed">Closed</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <a href="tel:7186677700" class="btn btn-primary">Call to Schedule</a>
+      </div>
+      <div class="hours-visual" aria-hidden="true">
+        <div class="clock-wrap">
+          <svg class="clock-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="95" fill="white" stroke="#2C6BED" stroke-width="4"/>
+            <circle cx="100" cy="100" r="80" fill="#EBF3FF"/>
+            <!-- Hour marks -->
+            <line x1="100" y1="28" x2="100" y2="42" stroke="#1B2A4E" stroke-width="3" stroke-linecap="round"/>
+            <line x1="172" y1="100" x2="158" y2="100" stroke="#1B2A4E" stroke-width="3" stroke-linecap="round"/>
+            <line x1="100" y1="172" x2="100" y2="158" stroke="#1B2A4E" stroke-width="3" stroke-linecap="round"/>
+            <line x1="28" y1="100" x2="42" y2="100" stroke="#1B2A4E" stroke-width="3" stroke-linecap="round"/>
+            <!-- Minor marks -->
+            <line x1="149" y1="37" x2="143" y2="49" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="163" y1="51" x2="151" y2="57" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="163" y1="149" x2="151" y2="143" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="149" y1="163" x2="143" y2="151" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="51" y1="37" x2="57" y2="49" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="37" y1="51" x2="49" y2="57" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="37" y1="149" x2="49" y2="143" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="51" y1="163" x2="57" y2="151" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <!-- Numbers -->
+            <text x="100" y="56" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#1B2A4E">12</text>
+            <text x="164" y="105" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#1B2A4E">3</text>
+            <text x="100" y="168" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#1B2A4E">6</text>
+            <text x="36" y="105" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#1B2A4E">9</text>
+            <!-- Hour hand (pointing to ~8:30) -->
+            <line x1="100" y1="100" x2="68" y2="75" stroke="#1B2A4E" stroke-width="5" stroke-linecap="round"/>
+            <!-- Minute hand (pointing to 6 = 30 min) -->
+            <line x1="100" y1="100" x2="100" y2="145" stroke="#2C6BED" stroke-width="3.5" stroke-linecap="round"/>
+            <!-- Center dot -->
+            <circle cx="100" cy="100" r="6" fill="#2C6BED"/>
+            <circle cx="100" cy="100" r="3" fill="white"/>
+          </svg>
+          <p class="clock-label">8:30 AM – 5:00 PM<br/><span>Monday – Friday</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ LOCATION ═══ -->
+  <section class="location section section--alt" id="location">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visit Us</span>
+        <h2 class="section-title">Find Our Clinic</h2>
+      </div>
+      <div class="location-inner">
+        <div class="map-wrap">
+          <iframe
+            title="Dimino Physical Therapy location map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.372!2d-74.1168!3d40.5537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fc9e7d0e3a3%3A0x7f7e5d6c3d3b5a1b!2s299+Guyon+Ave%2C+Staten+Island%2C+NY+10306!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="location-info">
+          <div class="loc-detail">
+            <div class="loc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="loc-label">Address</p>
+              <p class="loc-val">299 Guyon Ave Suite B<br/>Staten Island, NY 10306</p>
+            </div>
+          </div>
+          <div class="loc-detail">
+            <div class="loc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1.01.37 2 .72 2.96a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.12-.56a2 2 0 012.11-.45c.96.35 1.95.59 2.96.72A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="loc-label">Phone</p>
+              <a href="tel:7186677700" class="loc-val loc-link">(718) 667-7700</a>
+            </div>
+          </div>
+          <div class="loc-detail">
+            <div class="loc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l4-2v10l-4-2"/></svg>
+            </div>
+            <div>
+              <p class="loc-label">Parking</p>
+              <p class="loc-val">Free on-site parking available for patients</p>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=299+Guyon+Ave+Suite+B+Staten+Island+NY+10306" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;margin-right:8px;" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ REVIEWS ════ -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What Patients Say</span>
+        <h2 class="section-title">Patient Reviews</h2>
+        <div class="reviews-summary">
+          <div class="summary-stars" aria-label="4.9 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="summary-score">4.9 out of 5</span>
+          <span class="summary-count">Based on 45 reviews</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"Great physical therapy care and very professional staff. They really took the time to understand my injury and create a personalized recovery plan."</p>
+          <div class="review-author">
+            <div class="review-avatar">MR</div>
+            <div>
+              <p class="review-name">M.R.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"Highly recommend for rehabilitation and recovery. After my surgery, they guided me through every step of the healing process with patience and expertise."</p>
+          <div class="review-author">
+            <div class="review-avatar">JL</div>
+            <div>
+              <p class="review-name">J.L.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"The therapists here are incredibly knowledgeable. My back pain has dramatically improved after just a few weeks of treatment. Excellent clinic!"</p>
+          <div class="review-author">
+            <div class="review-avatar">SK</div>
+            <div>
+              <p class="review-name">S.K.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"Amazing experience from start to finish. The staff is warm, professional, and truly committed to helping patients get better. I'm fully recovered now!"</p>
+          <div class="review-author">
+            <div class="review-avatar">AT</div>
+            <div>
+              <p class="review-name">A.T.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"Dimino PT helped me recover from a knee injury faster than I expected. Their mobility training program was exactly what I needed to get back on my feet."</p>
+          <div class="review-author">
+            <div class="review-avatar">CN</div>
+            <div>
+              <p class="review-name">C.N.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"The entire team at Dimino Physical Therapy is outstanding. Very clean facility, professional service, and real results. Couldn't be happier with my treatment."</p>
+          <div class="review-author">
+            <div class="review-avatar">PG</div>
+            <div>
+              <p class="review-name">P.G.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ CONTACT ════ -->
+  <section class="contact section section--alt" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Book an Appointment</h2>
+        <p class="contact-sub">Call our clinic to schedule a physical therapy appointment with our experienced team.</p>
+        <a href="tel:7186677700" class="btn btn-primary btn-xl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1.01.37 2 .72 2.96a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.12-.56a2 2 0 012.11-.45c.96.35 1.95.59 2.96.72A2 2 0 0122 16.92z"/></svg>
+          Call (718) 667-7700
+        </a>
+        <div class="contact-details">
+          <div class="c-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>299 Guyon Ave Suite B, Staten Island, NY 10306</span>
+          </div>
+          <div class="c-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Mon–Fri: 8:30 AM – 5:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contact-form" novalidate>
+          <h3 class="form-title">Send a Message</h3>
+          <div class="form-group">
+            <label for="f-name">Full Name</label>
+            <input type="text" id="f-name" name="name" placeholder="Your full name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Phone Number</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(xxx) xxx-xxxx" autocomplete="tel" required />
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email Address</label>
+            <input type="email" id="f-email" name="email" placeholder="your@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Tell us about your condition or questions..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+          <div class="form-success" id="form-success" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ FOOTER ═════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="#home" class="logo-link logo-link--white">
+          <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="24" fill="#2C6BED"/>
+            <path d="M14 12 H22 C30 12 36 17.5 36 24 C36 30.5 30 36 22 36 H14 Z" fill="none" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="24" cy="18" r="1.8" fill="white"/>
+            <circle cx="26" cy="22" r="1.8" fill="white"/>
+            <circle cx="24" cy="26" r="1.8" fill="white"/>
+            <circle cx="26" cy="30" r="1.8" fill="white"/>
+            <path d="M14 18 Q18 14 22 16" stroke="#93C5FD" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text logo-text--white">
+            <span class="logo-name">Dimino</span>
+            <span class="logo-sub">Physical Therapy</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Recovery • Mobility • Strength</p>
+        <p class="footer-addr">299 Guyon Ave Suite B<br/>Staten Island, NY 10306</p>
+        <a href="tel:7186677700" class="footer-phone">(718) 667-7700</a>
+        <p class="footer-hours">Mon–Fri: 8:30 AM – 5:00 PM</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <nav aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#hours">Hours</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Ready to start your recovery? Call us to schedule an appointment today.</p>
+        <a href="tel:7186677700" class="btn btn-primary btn-sm footer-cta">Call Now</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Dimino Physical Therapy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+/* ═══════════════════════════════════════════════════════════════
+   Dimino Physical Therapy — Main JavaScript
+   ═══════════════════════════════════════════════════════════════ */
+
+'use strict';
+
+// ─── Navbar: scroll shadow + mobile menu ─────────────────────
+(function () {
+  const navbar    = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+
+  // Shadow on scroll
+  window.addEventListener('scroll', function () {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Toggle mobile menu
+  hamburger.addEventListener('click', function () {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen.toString());
+  });
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function (e) {
+    if (!navbar.contains(e.target)) {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+// ─── Active nav link on scroll ───────────────────────────────
+(function () {
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a:not(.btn)');
+
+  function onScroll() {
+    let current = '';
+    sections.forEach(function (sec) {
+      const top = sec.getBoundingClientRect().top;
+      if (top <= 90) current = sec.id;
+    });
+    navAnchors.forEach(function (a) {
+      a.style.color = '';
+      a.style.background = '';
+      const href = a.getAttribute('href');
+      if (href === '#' + current || (current === 'home' && href === '#home')) {
+        a.style.color = 'var(--blue)';
+        a.style.background = 'var(--blue-light)';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+// ─── Scroll-triggered fade-in animations ─────────────────────
+(function () {
+  const targets = [
+    '.service-card',
+    '.review-card',
+    '.info-card',
+    '.about-content',
+    '.about-image',
+    '.hours-content',
+    '.contact-info',
+    '.contact-form-wrap',
+    '.loc-detail',
+    '.section-header',
+  ];
+
+  const allEls = document.querySelectorAll(targets.join(','));
+  allEls.forEach(function (el) { el.classList.add('fade-in'); });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  allEls.forEach(function (el) { observer.observe(el); });
+
+  // Stagger delay for grid children
+  document.querySelectorAll('.services-grid, .reviews-grid, .info-grid').forEach(function (grid) {
+    Array.from(grid.children).forEach(function (child, i) {
+      child.style.transitionDelay = (i * 80) + 'ms';
+    });
+  });
+})();
+
+// ─── Contact form ─────────────────────────────────────────────
+(function () {
+  const form    = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name  = form.querySelector('#f-name').value.trim();
+    const phone = form.querySelector('#f-phone').value.trim();
+
+    if (!name) {
+      alert('Please enter your name.');
+      form.querySelector('#f-name').focus();
+      return;
+    }
+    if (!phone) {
+      alert('Please enter your phone number.');
+      form.querySelector('#f-phone').focus();
+      return;
+    }
+
+    // Simulate submission (replace with real backend/email service)
+    const btn = form.querySelector('button[type="submit"]');
+    const origText = btn.textContent;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    setTimeout(function () {
+      form.reset();
+      btn.textContent = origText;
+      btn.disabled = false;
+      success.textContent = '✓ Thank you, ' + name + '! We\'ll be in touch to confirm your appointment.';
+      success.classList.add('visible');
+      setTimeout(function () { success.classList.remove('visible'); }, 6000);
+    }, 1200);
+  });
+})();
+
+// ─── Footer year ─────────────────────────────────────────────
+(function () {
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
+
+// ─── Smooth scroll polyfill for older Safari ─────────────────
+(function () {
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      const id = anchor.getAttribute('href').slice(1);
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+
+  </script>
+</body>
+</html>
