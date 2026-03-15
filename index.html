@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimino Physical Therapy | Staten Island, NY</title>
+  <meta name="description" content="Dimino Physical Therapy provides trusted physical therapy care in Staten Island, NY. Call (718) 667-7700 to book an appointment." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ NAVBAR ═══ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="#home" class="logo-link">
+        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Background circle -->
+          <circle cx="24" cy="24" r="24" fill="#2C6BED"/>
+          <!-- Stylized D + spine -->
+          <path d="M14 12 H22 C30 12 36 17.5 36 24 C36 30.5 30 36 22 36 H14 Z"
+                fill="none" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+          <!-- Spine dots (vertebrae) -->
+          <circle cx="24" cy="18" r="1.8" fill="white"/>
+          <circle cx="26" cy="22" r="1.8" fill="white"/>
+          <circle cx="24" cy="26" r="1.8" fill="white"/>
+          <circle cx="26" cy="30" r="1.8" fill="white"/>
+          <!-- Motion arc -->
+          <path d="M14 18 Q18 14 22 16" stroke="#93C5FD" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-name">Dimino</span>
+          <span class="logo-sub">Physical Therapy</span>
+        </span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Nav links -->
+      <nav class="nav-links" id="nav-links" role="navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#hours">Hours</a>
+        <a href="#location">Location</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:7186677700" class="btn btn-primary btn-nav">Call to Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════ HERO ═══════ -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">Staten Island's Trusted PT Clinic</span>
+        <h1 class="hero-title">
+          Dimino<br/>Physical Therapy
+        </h1>
+        <p class="hero-subtitle">
+          High-quality physiotherapy treatment focused on recovery, mobility, and long-term wellness.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:7186677700" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1.01.37 2 .72 2.96a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.12-.56a2 2 0 012.11-.45c.96.35 1.95.59 2.96.72A2 2 0 0122 16.92z"/></svg>
+            Call Now — (718) 667-7700
+          </a>
+          <a href="https://maps.google.com/?q=299+Guyon+Ave+Suite+B+Staten+Island+NY+10306" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-img-placeholder">
+          <!-- Clinic exterior illustration placeholder -->
+          <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sky -->
+            <rect width="520" height="380" fill="#EBF3FF"/>
+            <!-- Clouds -->
+            <ellipse cx="80" cy="60" rx="55" ry="22" fill="white" opacity="0.9"/>
+            <ellipse cx="120" cy="50" rx="45" ry="20" fill="white" opacity="0.9"/>
+            <ellipse cx="400" cy="75" rx="60" ry="20" fill="white" opacity="0.85"/>
+            <ellipse cx="445" cy="65" rx="45" ry="18" fill="white" opacity="0.85"/>
+            <!-- Ground -->
+            <rect y="290" width="520" height="90" fill="#D1E8D0"/>
+            <!-- Sidewalk -->
+            <rect y="310" width="520" height="40" fill="#C8C8C8"/>
+            <!-- Building body -->
+            <rect x="100" y="130" width="320" height="200" fill="#F0F4FF"/>
+            <rect x="100" y="130" width="320" height="200" fill="none" stroke="#2C6BED" stroke-width="2"/>
+            <!-- Roof -->
+            <polygon points="85,130 260,70 435,130" fill="#1B2A4E"/>
+            <!-- Roof edge -->
+            <line x1="85" y1="130" x2="435" y2="130" stroke="#2C6BED" stroke-width="3"/>
+            <!-- Windows row 1 -->
+            <rect x="130" y="160" width="60" height="50" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <line x1="160" y1="160" x2="160" y2="210" stroke="#2C6BED" stroke-width="1"/>
+            <line x1="130" y1="185" x2="190" y2="185" stroke="#2C6BED" stroke-width="1"/>
+            <rect x="230" y="160" width="60" height="50" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <line x1="260" y1="160" x2="260" y2="210" stroke="#2C6BED" stroke-width="1"/>
+            <line x1="230" y1="185" x2="290" y2="185" stroke="#2C6BED" stroke-width="1"/>
+            <rect x="330" y="160" width="60" height="50" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <line x1="360" y1="160" x2="360" y2="210" stroke="#2C6BED" stroke-width="1"/>
+            <line x1="330" y1="185" x2="390" y2="185" stroke="#2C6BED" stroke-width="1"/>
+            <!-- Door -->
+            <rect x="210" y="250" width="100" height="80" rx="4" fill="#2C6BED"/>
+            <rect x="215" y="255" width="42" height="70" rx="2" fill="#BDD6F8"/>
+            <rect x="263" y="255" width="42" height="70" rx="2" fill="#BDD6F8"/>
+            <circle cx="255" cy="292" r="4" fill="#1B2A4E"/>
+            <circle cx="265" cy="292" r="4" fill="#1B2A4E"/>
+            <!-- Sign board -->
+            <rect x="145" y="235" width="225" height="30" rx="4" fill="#1B2A4E"/>
+            <text x="257" y="255" font-family="Montserrat,sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="600">DIMINO PHYSICAL THERAPY</text>
+            <!-- Cross / medical symbol -->
+            <rect x="242" y="90" width="36" height="36" rx="4" fill="#2C6BED" opacity="0.9"/>
+            <rect x="249" y="97" width="22" height="8" rx="2" fill="white"/>
+            <rect x="253" y="91" width="8" height="22" rx="2" fill="white"/>
+            <!-- Trees -->
+            <rect x="55" y="260" width="10" height="50" fill="#8B6914"/>
+            <ellipse cx="60" cy="240" rx="28" ry="35" fill="#4CAF50"/>
+            <ellipse cx="60" cy="230" rx="22" ry="28" fill="#66BB6A"/>
+            <rect x="445" y="260" width="10" height="50" fill="#8B6914"/>
+            <ellipse cx="450" cy="240" rx="28" ry="35" fill="#4CAF50"/>
+            <ellipse cx="450" cy="230" rx="22" ry="28" fill="#66BB6A"/>
+            <!-- Suite B label -->
+            <rect x="170" y="218" width="50" height="18" rx="3" fill="#2C6BED"/>
+            <text x="195" y="230" font-family="Montserrat,sans-serif" font-size="9" fill="white" text-anchor="middle">Suite B</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ QUICK INFO ══ -->
+  <section class="quick-info" id="info-bar">
+    <div class="container info-grid">
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Location</span>
+          <span class="info-value">299 Guyon Ave Suite B</span>
+          <span class="info-value">Staten Island, NY 10306</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1.01.37 2 .72 2.96a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.12-.56a2 2 0 012.11-.45c.96.35 1.95.59 2.96.72A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Phone</span>
+          <a href="tel:7186677700" class="info-value info-link">(718) 667-7700</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon info-icon--gold">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Rating</span>
+          <span class="info-value">⭐ 4.9 / 5 Stars</span>
+          <span class="info-value">Based on 45 Reviews</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Hours</span>
+          <span class="info-value">Mon–Fri: 8:30 AM – 5:00 PM</span>
+          <span class="info-value info-closed">Sat &amp; Sun: Closed</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ ABOUT ══════ -->
+  <section class="about section" id="about">
+    <div class="container about-inner">
+      <div class="about-content">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">About Dimino Physical Therapy</h2>
+        <p class="about-text">
+          Dimino Physical Therapy provides personalized physiotherapy care in Staten Island. The clinic focuses on rehabilitation, pain reduction, and restoring movement using evidence-based physical therapy treatments. The goal is to help patients recover mobility and return to normal daily activities safely.
+        </p>
+        <ul class="about-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Licensed physical therapy professionals
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Personalized rehabilitation programs
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Injury recovery and pain management
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Mobility and strengthening therapy
+          </li>
+        </ul>
+        <a href="tel:7186677700" class="btn btn-primary">Schedule a Consultation</a>
+      </div>
+
+      <div class="about-image">
+        <div class="about-img-wrap">
+          <!-- Clinic interior / PT illustration -->
+          <svg viewBox="0 0 420 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="420" height="360" fill="#EBF3FF" rx="16"/>
+            <!-- Room floor -->
+            <rect y="260" width="420" height="100" fill="#D8E8FF" rx="0"/>
+            <!-- Treatment table -->
+            <rect x="80" y="200" width="200" height="20" rx="5" fill="#1B2A4E"/>
+            <rect x="90" y="220" width="180" height="60" rx="4" fill="#2C6BED" opacity="0.8"/>
+            <rect x="100" y="210" width="160" height="10" rx="3" fill="#BDD6F8"/>
+            <!-- Table legs -->
+            <rect x="95" y="280" width="12" height="20" rx="2" fill="#1B2A4E"/>
+            <rect x="253" y="280" width="12" height="20" rx="2" fill="#1B2A4E"/>
+            <!-- Patient (lying) -->
+            <ellipse cx="200" cy="205" rx="30" ry="14" fill="#FDDCB5"/>
+            <circle cx="250" cy="200" r="16" fill="#FDDCB5"/>
+            <rect x="220" y="197" width="32" height="10" rx="5" fill="#FDDCB5"/>
+            <!-- Therapist -->
+            <circle cx="330" cy="175" r="20" fill="#FDDCB5"/>
+            <rect x="310" y="195" width="40" height="65" rx="8" fill="#2C6BED"/>
+            <rect x="305" y="218" width="18" height="40" rx="6" fill="#FDDCB5" transform="rotate(-20 305 218)"/>
+            <rect x="337" y="218" width="18" height="40" rx="6" fill="#FDDCB5" transform="rotate(20 337 218)"/>
+            <rect x="315" y="260" width="14" height="35" rx="4" fill="#1B2A4E"/>
+            <rect x="331" y="260" width="14" height="35" rx="4" fill="#1B2A4E"/>
+            <!-- Wall shelf / equipment -->
+            <rect x="20" y="130" width="50" height="10" rx="3" fill="#1B2A4E"/>
+            <rect x="25" y="100" width="18" height="30" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <rect x="47" y="110" width="18" height="20" rx="4" fill="#BDD6F8" stroke="#2C6BED" stroke-width="1.5"/>
+            <!-- Medical cross on wall -->
+            <rect x="370" y="100" width="36" height="36" rx="4" fill="#2C6BED" opacity="0.25"/>
+            <rect x="377" y="108" width="22" height="8" rx="2" fill="#2C6BED"/>
+            <rect x="381" y="102" width="8" height="22" rx="2" fill="#2C6BED"/>
+            <!-- Window -->
+            <rect x="140" y="60" width="120" height="90" rx="6" fill="#BDD6F8" stroke="#2C6BED" stroke-width="2"/>
+            <line x1="200" y1="60" x2="200" y2="150" stroke="#2C6BED" stroke-width="1.5"/>
+            <line x1="140" y1="105" x2="260" y2="105" stroke="#2C6BED" stroke-width="1.5"/>
+            <!-- Exercise ball -->
+            <circle cx="50" cy="255" r="28" fill="#93C5FD" opacity="0.7"/>
+            <ellipse cx="50" cy="255" rx="28" ry="8" fill="#60A5FA" opacity="0.4"/>
+            <!-- Tag badge -->
+            <rect x="290" y="40" width="110" height="42" rx="8" fill="#1B2A4E"/>
+            <text x="345" y="57" font-family="Montserrat,sans-serif" font-size="8" fill="#93C5FD" text-anchor="middle" font-weight="600">DIMINO PT</text>
+            <text x="345" y="72" font-family="Open Sans,sans-serif" font-size="7.5" fill="white" text-anchor="middle">Expert PT Care</text>
+          </svg>
+          <div class="about-badge">
+            <span class="badge-num">4.9★</span>
+            <span class="badge-txt">Patient Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ SERVICES ═══ -->
+  <section class="services section section--alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Physical Therapy Services</h2>
+        <p class="section-sub">Comprehensive rehabilitation treatments designed to restore strength, mobility, and quality of life.</p>
+      </div>
+      <div class="services-grid">
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Physiotherapy Treatment</h3>
+          <p class="service-desc">Professional rehabilitation services designed to restore strength, mobility, and movement following injury or chronic pain.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Rehabilitation Therapy</h3>
+          <p class="service-desc">Post-injury and post-surgery recovery programs tailored to get you back to full function as quickly and safely as possible.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="5" r="3"/><path d="M12 8v8M8 20h8M6 12c0-2 1-3 3-3M18 12c0-2-1-3-3-3"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Mobility &amp; Strength Training</h3>
+          <p class="service-desc">Therapeutic exercises and manual techniques to improve range of motion and rebuild muscle strength safely.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Pain Management Therapy</h3>
+          <p class="service-desc">Evidence-based treatments designed to reduce acute and chronic pain while restoring full functionality and comfort.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ HOURS ══════ -->
+  <section class="hours section" id="hours">
+    <div class="container hours-inner">
+      <div class="hours-content">
+        <span class="section-tag">When We're Open</span>
+        <h2 class="section-title">Opening Times</h2>
+        <div class="hours-table-wrap">
+          <table class="hours-table" aria-label="Clinic opening hours">
+            <tbody>
+              <tr class="open-day"><td>Monday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="open-day"><td>Tuesday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="open-day"><td>Wednesday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="open-day"><td>Thursday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="open-day"><td>Friday</td><td>8:30 AM – 5:00 PM</td><td><span class="badge-open">Open</span></td></tr>
+              <tr class="closed-day"><td>Saturday</td><td>Closed</td><td><span class="badge-closed">Closed</span></td></tr>
+              <tr class="closed-day"><td>Sunday</td><td>Closed</td><td><span class="badge-closed">Closed</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <a href="tel:7186677700" class="btn btn-primary">Call to Schedule</a>
+      </div>
+      <div class="hours-visual" aria-hidden="true">
+        <div class="clock-wrap">
+          <svg class="clock-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="95" fill="white" stroke="#2C6BED" stroke-width="4"/>
+            <circle cx="100" cy="100" r="80" fill="#EBF3FF"/>
+            <!-- Hour marks -->
+            <line x1="100" y1="28" x2="100" y2="42" stroke="#1B2A4E" stroke-width="3" stroke-linecap="round"/>
+            <line x1="172" y1="100" x2="158" y2="100" stroke="#1B2A4E" stroke-width="3" stroke-linecap="round"/>
+            <line x1="100" y1="172" x2="100" y2="158" stroke="#1B2A4E" stroke-width="3" stroke-linecap="round"/>
+            <line x1="28" y1="100" x2="42" y2="100" stroke="#1B2A4E" stroke-width="3" stroke-linecap="round"/>
+            <!-- Minor marks -->
+            <line x1="149" y1="37" x2="143" y2="49" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="163" y1="51" x2="151" y2="57" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="163" y1="149" x2="151" y2="143" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="149" y1="163" x2="143" y2="151" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="51" y1="37" x2="57" y2="49" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="37" y1="51" x2="49" y2="57" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="37" y1="149" x2="49" y2="143" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <line x1="51" y1="163" x2="57" y2="151" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+            <!-- Numbers -->
+            <text x="100" y="56" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#1B2A4E">12</text>
+            <text x="164" y="105" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#1B2A4E">3</text>
+            <text x="100" y="168" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#1B2A4E">6</text>
+            <text x="36" y="105" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#1B2A4E">9</text>
+            <!-- Hour hand (pointing to ~8:30) -->
+            <line x1="100" y1="100" x2="68" y2="75" stroke="#1B2A4E" stroke-width="5" stroke-linecap="round"/>
+            <!-- Minute hand (pointing to 6 = 30 min) -->
+            <line x1="100" y1="100" x2="100" y2="145" stroke="#2C6BED" stroke-width="3.5" stroke-linecap="round"/>
+            <!-- Center dot -->
+            <circle cx="100" cy="100" r="6" fill="#2C6BED"/>
+            <circle cx="100" cy="100" r="3" fill="white"/>
+          </svg>
+          <p class="clock-label">8:30 AM – 5:00 PM<br/><span>Monday – Friday</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ LOCATION ═══ -->
+  <section class="location section section--alt" id="location">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visit Us</span>
+        <h2 class="section-title">Find Our Clinic</h2>
+      </div>
+      <div class="location-inner">
+        <div class="map-wrap">
+          <iframe
+            title="Dimino Physical Therapy location map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.372!2d-74.1168!3d40.5537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fc9e7d0e3a3%3A0x7f7e5d6c3d3b5a1b!2s299+Guyon+Ave%2C+Staten+Island%2C+NY+10306!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="location-info">
+          <div class="loc-detail">
+            <div class="loc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="loc-label">Address</p>
+              <p class="loc-val">299 Guyon Ave Suite B<br/>Staten Island, NY 10306</p>
+            </div>
+          </div>
+          <div class="loc-detail">
+            <div class="loc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1.01.37 2 .72 2.96a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.12-.56a2 2 0 012.11-.45c.96.35 1.95.59 2.96.72A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="loc-label">Phone</p>
+              <a href="tel:7186677700" class="loc-val loc-link">(718) 667-7700</a>
+            </div>
+          </div>
+          <div class="loc-detail">
+            <div class="loc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l4-2v10l-4-2"/></svg>
+            </div>
+            <div>
+              <p class="loc-label">Parking</p>
+              <p class="loc-val">Free on-site parking available for patients</p>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=299+Guyon+Ave+Suite+B+Staten+Island+NY+10306" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;margin-right:8px;" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ REVIEWS ════ -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What Patients Say</span>
+        <h2 class="section-title">Patient Reviews</h2>
+        <div class="reviews-summary">
+          <div class="summary-stars" aria-label="4.9 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="summary-score">4.9 out of 5</span>
+          <span class="summary-count">Based on 45 reviews</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"Great physical therapy care and very professional staff. They really took the time to understand my injury and create a personalized recovery plan."</p>
+          <div class="review-author">
+            <div class="review-avatar">MR</div>
+            <div>
+              <p class="review-name">M.R.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"Highly recommend for rehabilitation and recovery. After my surgery, they guided me through every step of the healing process with patience and expertise."</p>
+          <div class="review-author">
+            <div class="review-avatar">JL</div>
+            <div>
+              <p class="review-name">J.L.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"The therapists here are incredibly knowledgeable. My back pain has dramatically improved after just a few weeks of treatment. Excellent clinic!"</p>
+          <div class="review-author">
+            <div class="review-avatar">SK</div>
+            <div>
+              <p class="review-name">S.K.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"Amazing experience from start to finish. The staff is warm, professional, and truly committed to helping patients get better. I'm fully recovered now!"</p>
+          <div class="review-author">
+            <div class="review-avatar">AT</div>
+            <div>
+              <p class="review-name">A.T.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"Dimino PT helped me recover from a knee injury faster than I expected. Their mobility training program was exactly what I needed to get back on my feet."</p>
+          <div class="review-author">
+            <div class="review-avatar">CN</div>
+            <div>
+              <p class="review-name">C.N.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 stars">★★★★★</div>
+          <p class="review-text">"The entire team at Dimino Physical Therapy is outstanding. Very clean facility, professional service, and real results. Couldn't be happier with my treatment."</p>
+          <div class="review-author">
+            <div class="review-avatar">PG</div>
+            <div>
+              <p class="review-name">P.G.</p>
+              <p class="review-date">Verified Patient</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ CONTACT ════ -->
+  <section class="contact section section--alt" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Book an Appointment</h2>
+        <p class="contact-sub">Call our clinic to schedule a physical therapy appointment with our experienced team.</p>
+        <a href="tel:7186677700" class="btn btn-primary btn-xl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.13 1.01.37 2 .72 2.96a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.12-.56a2 2 0 012.11-.45c.96.35 1.95.59 2.96.72A2 2 0 0122 16.92z"/></svg>
+          Call (718) 667-7700
+        </a>
+        <div class="contact-details">
+          <div class="c-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>299 Guyon Ave Suite B, Staten Island, NY 10306</span>
+          </div>
+          <div class="c-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Mon–Fri: 8:30 AM – 5:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contact-form" novalidate>
+          <h3 class="form-title">Send a Message</h3>
+          <div class="form-group">
+            <label for="f-name">Full Name</label>
+            <input type="text" id="f-name" name="name" placeholder="Your full name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Phone Number</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(xxx) xxx-xxxx" autocomplete="tel" required />
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email Address</label>
+            <input type="email" id="f-email" name="email" placeholder="your@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Tell us about your condition or questions..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+          <div class="form-success" id="form-success" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ FOOTER ═════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="#home" class="logo-link logo-link--white">
+          <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="24" fill="#2C6BED"/>
+            <path d="M14 12 H22 C30 12 36 17.5 36 24 C36 30.5 30 36 22 36 H14 Z" fill="none" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="24" cy="18" r="1.8" fill="white"/>
+            <circle cx="26" cy="22" r="1.8" fill="white"/>
+            <circle cx="24" cy="26" r="1.8" fill="white"/>
+            <circle cx="26" cy="30" r="1.8" fill="white"/>
+            <path d="M14 18 Q18 14 22 16" stroke="#93C5FD" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text logo-text--white">
+            <span class="logo-name">Dimino</span>
+            <span class="logo-sub">Physical Therapy</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Recovery • Mobility • Strength</p>
+        <p class="footer-addr">299 Guyon Ave Suite B<br/>Staten Island, NY 10306</p>
+        <a href="tel:7186677700" class="footer-phone">(718) 667-7700</a>
+        <p class="footer-hours">Mon–Fri: 8:30 AM – 5:00 PM</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <nav aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#hours">Hours</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Ready to start your recovery? Call us to schedule an appointment today.</p>
+        <a href="tel:7186677700" class="btn btn-primary btn-sm footer-cta">Call Now</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Dimino Physical Therapy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
