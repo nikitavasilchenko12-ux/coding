@@ -1959,5 +1959,23 @@ textarea:focus-visible {
 })();
 
   </script>
+
+  <!-- Download button -->
+  <div style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+    <a id="dl-btn" download="dimino-pt-website.html"
+       style="display:inline-flex;align-items:center;gap:8px;background:#2C6BED;color:#fff;
+              font-family:inherit;font-size:14px;font-weight:600;padding:12px 20px;
+              border-radius:8px;text-decoration:none;box-shadow:0 4px 14px rgba(44,107,237,.4);
+              cursor:pointer;">
+      &#8681; Download Website
+    </a>
+  </div>
+  <script>
+    (function(){
+      var html = document.documentElement.outerHTML;
+      var blob = new Blob(['<!DOCTYPE html>\n' + html], {type:'text/html'});
+      document.getElementById('dl-btn').href = URL.createObjectURL(blob);
+    })();
+  </script>
 </body>
 </html>
